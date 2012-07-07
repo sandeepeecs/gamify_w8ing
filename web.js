@@ -68,4 +68,4 @@ app.get('/realtime', function(req, res){
 io.sockets.emit('news', { ph : 'bla' });	
 //console.log(io.sockets);
 
-app.listen(process.env.VCAP_APP_PORT || 20444);
+app.listen(process.env.PORT || 20444);
