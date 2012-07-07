@@ -570,7 +570,8 @@ $(document).ready(function() {
         b = new Slot('#slot2', 45, 2),
         c = new Slot('#slot3', 70, 3);
 
-	  var socket = io.connect('http://localhost');
+	  //var socket = io.connect('http://localhost');
+	var socket = io.connect('http://vivid-flower-9287.herokuapp.com');
 	  socket.on('news', function (data) {
 	    console.log(data);
 
