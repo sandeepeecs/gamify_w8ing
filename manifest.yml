@@ -1,0 +1,16 @@
+--- 
+applications: 
+  .: 
+    framework: 
+      info: 
+        description: Node.js Application
+        mem: 64M
+        exec: 
+      name: node
+    name: kookoo
+    mem: 128M
+    instances: 1
+    url: ${name}.${target-base}
+    services: 
+      mongodbmdb: 
+        type: mongodb

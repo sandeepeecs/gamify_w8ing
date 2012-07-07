@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>mBillionth KooKoo</title>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://yandex.st/raphael/1.5.2/raphael.min.js"></script>
+<!-- <script src="/nowjs/now.js"></script> -->
+
+<script>
+$(document).ready(function(){
+var paper = Raphael(10, 10, 800, 600);
+  now.receiveMessage = function(name, message){
+$("#messages").append("<br>" + name + ": " + message);
+//alert(name);
+if(name == "Face")
+{
+//alert("face");
+// Face
+var face = paper.circle(230,120,50);
+face.attr({fill:'rgb(125,240,100)'});
+}
+else if(name == "LeftEye")
+{
+// Left eye
+paper.path('M 200 100 s 5 -5 10 0');
+var eye1 = paper.circle(205,106,5);
+eye1.attr({
+fill: '#000'
+});
+}
+
+else if(name == "RightEye")
+{
+
+// Right eye
+paper.path('M 250 100 s 5 -5 10 0');
+var eye2 = paper.circle(255,106,5);
+eye2.attr({
+fill: '#000'
+});
+
+}
+
+else if(name == "Mouth")
+{
+
+// Mouth
+paper.path('M 210 150 s 20 15 45 0');
+}
+
+else if(name == "Nose")
+{
+
+// Nose
+var nose = paper.path('M 225 125 l 10 0 l -5 10 z');
+nose.attr({
+fill:'rgb(0,0,255)'
+});
+}
+else if(name == "Neck")
+{
+
+// neck
+var neck = paper.path('M 230 170 l 0 20');
+neck.attr({
+'stroke-width': 2,
+stroke: 'rgb(255,0,100)'
+});
+}
+else if(name == "Body")
+{
+
+// Body
+var body = paper.rect(220,190,20,100,8);
+body.attr({
+fill:'rgb(255,230,100)',
+'stroke-width':2
+});
+
+}
+else if(name == "LeftHand")
+{
+
+// Left hand
+var hand1 = paper.path('M 220 200 l -40 80');
+}
+else if(name == "RightHand")
+{
+
+// Right hand
+var hand2 = paper.path('M 241 200 l 40 80');
+}
+
+else if(name == "LeftLeg")
+{
+
+// Left leg
+var leg1 = paper.path('M 225 290 l -20 50');
+}
+else if(name == "RightLeg")
+{
+
+// Right leg
+var leg2 = paper.path('M 235 290 l 20 50');
+}
+  }
+  
+  $("#send-button").click(function(){
+    now.distributeMessage($("#text-input").val());
+    $("#text-input").val("");
+  });
+
+//  now.name = prompt("What's your name?", "");
+
+});
+</script>
+</head>
+
+<body>
+
+Call 040-30512852 and build something:
+<div id="messages" style="float:right"></div>
+<!--<input type="text" id="text-input">
+<input type="button" value="Send" id="send-button">-->
+</body>
+</html>
