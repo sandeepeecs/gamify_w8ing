@@ -1,5 +1,5 @@
 var fs = require('fs');
-var eyes = require('eyes');
+
 var express = require('express');
 var app =  express.createServer()
   , io = require('socket.io').listen(app);
@@ -66,6 +66,6 @@ app.get('/realtime', function(req, res){
 });//getrealtime close
 
 io.sockets.emit('news', { ph : 'bla' });	
-console.log(io.sockets);
+//console.log(io.sockets);
 
 app.listen(process.env.VCAP_APP_PORT || 3000);

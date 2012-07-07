@@ -1,15 +1,321 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>KooKoo Slot Machine</title>
-<meta name="description" content="KooKoo slot machine"> 
-<meta name="keywords" content="javascript, jquery, spritely, animation, sprite, background position, slot, game, games, saurabh, odhyan">
+<title>-</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+
+
 <style>
+
+
+
+/* CSS Document */
+
 body {
-	font-family:verdana,arial;
-	padding:20px;
+	background:#fff;
+	font: 16px/1.95em "Lucida Grande","Lucida Sans Unicode",geneva,verdana,sans-serif;
+	margin:0;
+	color:#666;
+	padding-top:20px;
+	border:3px solid #eee;
 }
+
+html {
+	border:15px solid #f6f6f6;
+	border-left:30px solid #f6f6f6;
+	border-right:30px solid #f6f6f6;
+}
+
+* {
+	margin:0;
+	padding:0;
+	outline:none;
+}
+
+#footer {
+	padding:20px 50px;
+	margin-top:50px;
+	clear:both;
+	border-top:2px solid #eee;
+	font:80% Verdana;
+	line-height:25px;
+}
+
+#footer a {
+	color:#999;
+}
+
+#footer .validate {
+	float:right;
+}
+
+table {
+	width:100%;
+	padding:10px;
+	border:1px solid #eee;
+}
+
+th {
+	color:#6CCC26;
+	border-bottom:1px solid #eee;
+	padding:5px;
+}
+
+td {
+	padding:5px;
+	text-align:center;
+	background:#fafafa;
+}
+
+#container {
+	width:95%;
+	margin:0 auto;
+}
+
+#content ul {
+	margin:15px 0 15px 25px;
+}
+
+#content ul li {
+	border-bottom:1px solid #eee;
+	padding:10px;
+	color:#444;
+}
+
+#content img {
+	background:#fff;
+	padding:1px;
+	border:3px solid #eee;
+	margin:10px;
+}
+
+
+
+#sidebar ul {
+	list-style:none;
+}
+
+#sidebar ul a {
+	color:#444;
+	font:80% Verdana;
+	text-decoration:none;
+}
+
+#sidebar ul a span {
+	color:#ccc;
+}
+
+#sidebar ul a:hover span {
+	color:#333;
+}
+
+#sidebar p {
+	font:80% Verdana;
+	line-height:24px;
+	margin:10px 0 20px 0;
+}
+
+#sidebar ul li {
+	background:#fafafa;
+	margin:1px 0 0 0;
+	padding:5px;
+}
+
+#sidebar h3 {
+	font:120% Arial;
+	margin:5px 0;
+	color:#222;
+}
+
+#content {
+	width:70%;
+	float:left;
+	margin-bottom:50px;
+}
+
+#sidebar {
+	margin-left:75%;
+	border-left:1px solid #eee;
+	padding-left:30px;
+}
+
+.articleinfo {
+	font:80% Verdana;
+	border-top:1px solid #eee;
+	color:#999;
+	padding:20px 0;
+}
+
+.articleinfo a {
+	color:#6CCC26;
+}
+
+.articleinfo a:hover {
+	text-decoration:none;
+}
+
+#content h3 {
+	margin:20px 0;
+}
+
+blockquote {
+	background:#f6f6f6;
+	padding:0 10px;
+	border:1px solid #eee;
+	font:100% Georgia;
+}
+
+#content p {
+	line-height:30px;
+	margin:20px 0;
+	word-spacing:2px;
+}
+
+#content p a {
+	color:#222;
+	text-decoration:none;
+	border-bottom:1px solid #ccc;
+}
+
+#content p a:hover {
+	border-bottom:1px solid #aaa;
+}
+
+#content h2 {
+	font:190% Times;
+	margin-top:45px;
+}
+
+#content h2 a {
+	color:#333;
+	text-decoration:none;
+}
+
+#header {
+	width:100%;
+	margin:0 auto;
+	padding:20px 0;
+}
+
+#header .right {
+	float:right;
+}
+
+#header h1 {
+	font:290% Times New Roman;
+	letter-spacing:-2px;
+	margin-bottom:5px;
+	margin-left:35px;
+}
+
+#header h1 a {
+	color:#000;
+	text-decoration:none;
+}
+
+#header h1 a span {
+	color:#ccc;
+}
+
+#header h1 a:hover span {
+	color:#A3E800;
+}
+
+#header h3 {
+	font:80% Verdana;
+	color:#999;
+	display:inline;
+	margin-left:35px;
+}
+
+ul#nav {
+	background:#8EDF53;
+	padding:10px;
+	font-size:80%;
+	border-top:3px solid #6CCC26;
+	border-bottom:3px solid #6CCC26;
+	font-weight:bold;
+	margin:45px 0 0 0;
+}
+
+ul#nav li {
+	display:inline;
+	list-style:none;
+	margin-right:10px;
+}
+
+ul#nav li a {
+	padding:10px 14px;
+	color:#fff;
+	text-decoration:none;
+}
+
+ul#nav li a:hover {
+	background:#7EDB39;
+	color:#fff;
+}
+
+ul#nav li a.active {
+	background:#fff;
+	color:#333;
+	border-right:2px solid #6CCC26;
+	border-bottom:2px solid #6CCC26;
+}
+
+p.about {
+	border-top:3px solid #6CCC26;
+	border-bottom:3px solid #6CCC26;
+	color:#fff;
+	background:#8EDF53;
+	padding:10px;
+}
+
+p.about a {
+	color:#fff;
+}
+	
+
+
+
+/* These are standard sIFR styles... do not modify */
+
+.sIFR-flash {
+	visibility: visible !important;
+	margin: 0;
+}
+
+.sIFR-replaced {
+	visibility: visible !important;
+}
+
+span.sIFR-alternate {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 0;
+	height: 0;
+	display: block;
+	overflow: hidden;
+}
+
+/* Hide Adblock Object tab: the text should show up just fine, not poorly with a tab laid over it. */
+.sIFR-flash + div[adblocktab=true] {
+  display: none !important;
+}
+
+/* These "decoy" styles are used to hide the browser text before it is replaced... the negative-letter spacing in this case is used to make the browser text metrics match up with the sIFR text metrics since the sIFR text in this example is so much narrower... your own settings may vary... any weird sizing issues you may run into are usually fixed by tweaking these decoy styles */
+
+
+
+.sIFR-hasFlash h2 {
+	visibility: hidden;
+	letter-spacing: -9px;
+	font-size: 55px;
+}
+
+
+/*end of 1.css */
 .bd {
 	text-align:center;
 }
@@ -63,13 +369,10 @@ button {
 	clear:both;
 }
 </style>
+
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
 <script src="http://kookoo.in/jquery.spritely.js"></script>
 <script src="http://kookoo.in/jquery.backgroundPosition.js"></script>
-
-
-
-
 <script src="/socket.io/socket.io.js"></script>
 
 
@@ -266,11 +569,11 @@ $(document).ready(function() {
     var a = new Slot('#slot1', 30, 1),
         b = new Slot('#slot2', 45, 2),
         c = new Slot('#slot3', 70, 3);
-	
-	  var socket = io.connect('http://localhost:8080');
+
+	  var socket = io.connect('http://localhost');
 	  socket.on('news', function (data) {
 	    console.log(data);
-	    
+
 	  });
 	socket.on('start', function (data) {
     	  console.log(data);
@@ -282,8 +585,8 @@ $(document).ready(function() {
 	  stopSlot();
 	  setTimeout(function(){ resetSlot(); },(60*1000));		
 	});
-	
-	
+
+
 
 	function startSlot()
 	{
@@ -303,7 +606,7 @@ $(document).ready(function() {
                 }
             }, 100);
 	}
-	
+
 	function stopSlot()
 	{
 	    a.stop();
@@ -320,7 +623,7 @@ $(document).ready(function() {
                     enableControl();
                     window.clearInterval(x);
                     printResult();
-			
+
 			var res;	
 			if(win[a.pos] === win[b.pos] && win[a.pos] === win[c.pos]) {
 			    res = "You Win!";
@@ -328,11 +631,11 @@ $(document).ready(function() {
 			    res = "You Lose";
 			}
 			socket.emit('GAMESTATUS', { my: res });	
-			    		
+
                 }
             }, 100);
 	}
-	
+
 	function resetSlot()
 	{
 	    a.reset();
@@ -448,44 +751,57 @@ $(document).ready(function() {
 });
 
 </script>
-<!--<script src="/nowjs/now.js"></script> --> 
-
-
-
 
 
 </head>
-
+ 
 <body>
-<div class="hd">
-</div>
-<div class="bd">
-	<h2>Slot machine</h2>
-	<h3>Start playing by calling 040 30512852</h3>
-	<div class="container">
-		<div class="instructions">
-		<ol>
-	<li>Call 040 30512852 to start the slot machine.
-	</li>
-	<li>Disconnect to stop the slot machine
-	</li>
-	</ol>
-	</div>
-		<div class="slot-wrapper">
-			<div id="slot1" class="slot"></div>
-			<div id="slot2" class="slot"></div>
-			<div id="slot3" class="slot"></div>
-			<div class="clear"></div>
+
+		<div id="header">
+		
+				<h1><a href="#">HACKFEST</a></h1>
+				<h3>Gamify waiting @ Restaurents</h3>
+				
+				<ul id="nav">
+					SLOT MACHINE			
+				</ul>
+				
 		</div>
-		<div id="result"></div>
-    	<div id="player"></div>
-		<div><button id="control" disabled="disabled">Start</button>
+		
+		<div id="container">
+			<div id="content">
+		
+					<h2><a href="#">SLOT MACHINE</a></h2>
+					<h2><a href="#">Start playing by calling 040 30512852</a></h2>
+					Disconnect to stop the slot machine
+					<div class="hd">
+					</div>
+					<div class="bd">
+						<h3>Start playing by calling 040 30512852</h3>
+						<div class="container">
+							<div class="slot-wrapper">
+								<div id="slot1" class="slot"></div>
+								<div id="slot2" class="slot"></div>
+								<div id="slot3" class="slot"></div>
+								<div class="clear"></div>
+							</div>
+							<div id="result"></div>
+					    	<div id="player"></div>
+						</div>
+					</div>
+			</div>
+			<div id="sidebar">
+		
+				<h3>Hackfest</h3>
+				
+				<p class="about">
+					This app is to gamify waiting at the restaurents
+				</p>
+				<div style="line-height:400px;">&nbsp;</div>
+		
+			</div>	
+			<div style="line-height:30px;">&nbsp;</div>
 		</div>
-	</div>
-	<div class="credits">
-		<div>Inspired by <a href="http://odhyan.com/blog/">Saurabh Odhyan's</a> slot machine code</div>
-		<div class="browsers">Tested in Firefox, Chrome and IE8</div>
-	</div>
-</div>
+	
 </body>
 </html>
