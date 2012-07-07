@@ -1,4 +1,4 @@
-//var fs = require('fs');
+var fs = require('fs');
 
 var express = require('express');
 var app =  express.createServer()
@@ -10,7 +10,7 @@ var app =  express.createServer()
 app.configure(function(){
     app.use(express.bodyParser());
     app.use(app.router);
-   // app.use(express.static(__dirname + '/images'));
+   app.use(express.static(__dirname + '/images'));
 });
 
 io.set('log level', 1)
